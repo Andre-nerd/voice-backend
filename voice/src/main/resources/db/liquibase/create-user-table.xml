@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet  id="create_user_table"  author="develop">
+        <createTable  tableName="user">
+            <column  name="id"  type="bigint"  autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="is_deleted"  type="boolean" defaultValueBoolean="false"/>
+            <column  name="last_name"  type="varchar(90)"/>
+            <column  name="second_name"  type="varchar(90)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

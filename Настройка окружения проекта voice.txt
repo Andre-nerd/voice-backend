@@ -1,0 +1,3 @@
+Настройка окружения проекта
+
+docker run --name voice -e POSTGRES_PASSWORD=voice_pass -e POSTGRES_USER=voice_user -e POSTGRES_DB=voicedb -d -p 5432:5432 postgres:alpine

@@ -1,0 +1,42 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="create_friend-table" author="suleymanov.vladislav">
+        <createTable tableName="friend">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="is_deleted" type="boolean">
+            </column>
+            <column name="photo" type="varchar(255)">
+            </column>
+            <column name="status_code" type="varchar(255)">
+            </column>
+            <column name="first_name" type="varchar(255)">
+            </column>
+            <column name="last_name" type="varchar(255)">
+            </column>
+            <column name="city" type="varchar(255)">
+            </column>
+            <column name="country" type="varchar(255)">
+            </column>
+            <column name="birth_date" type="timestamp without time zone">
+            </column>
+            <column name="is_online" type="boolean">
+            </column>
+            <column name="id_from" type="bigint">
+            </column>
+            <column name="id_to" type="bigint">
+            </column>
+            <column name="previous_status" type="varchar(255)">
+            </column>
+            <column name="rating" type="int">
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
