@@ -17,3 +17,8 @@ public class UserController {
         return "show";
     }
 }
+//    @GetMapping()
+//    public String index(Model model) {
+//        model.addAttribute("people", personDAO.index());
+//        return "people/index";
+//    }
