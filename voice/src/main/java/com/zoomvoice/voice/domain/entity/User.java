@@ -24,6 +24,3 @@ public class User {
     private String lastName;
 
 }
-//            <column  name="is_deleted"  type="boolean" defaultValueBoolean="false"/>
-//            <column  name="first_name"  type="varchar(90)"/>
-//            <column  name="second_name"  type="varchar(90)"/>
