@@ -17,6 +17,9 @@ spring:
     change-log: classpath:db/changelog_init.xml
     enabled: true
     drop-first: false
-
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
 
 
