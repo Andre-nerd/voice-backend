@@ -27,7 +27,6 @@ public class UserController {
         model.addAttribute("people", persons);
         return "index";
     }
-
     @GetMapping("/{id}")
     public String show(@PathVariable Long id, Model model) throws BadRequestException {
         Optional<Person> person = userRepository.findById(id);
