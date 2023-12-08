@@ -21,11 +21,11 @@ import java.util.Optional;
 public class UserController {
     private final UserRepository userRepository;
 
-    @GetMapping()
+    @GetMapping("/all")
     public String index(Model model) {
         List<Person> persons = userRepository.findAll();
         model.addAttribute("people", persons);
-        return "index";
+        return "all";
     }
     @GetMapping("/{id}")
     public String show(@PathVariable Long id, Model model) throws BadRequestException {
@@ -40,7 +40,7 @@ public class UserController {
     @DeleteMapping("/{id}")
     public String delete(@PathVariable Long id) {
         userRepository.deleteById(id);
-        return "redirect:/api";
+        return "redirect:/api/all";
     }
     @GetMapping("/{id}/edit")
     public String edit(Model model, @PathVariable Long id){
@@ -54,7 +54,7 @@ public class UserController {
             return "edit";
         }
         userRepository.save(person);
-        return "redirect:/api";
+        return "redirect:/api/all";
     }
 
     @GetMapping("/new")

@@ -12,7 +12,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api/statistic")
+@RequestMapping("/statistic")
 public class StatisticController {
     private final UserRepository userRepository;
     @GetMapping()
