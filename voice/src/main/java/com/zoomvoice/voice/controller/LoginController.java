@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
     @GetMapping("")
     public String hello(){
-        return "hello";
+        return "redirect:/api";
     }
     @GetMapping("login")
     public String login(){

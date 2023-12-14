@@ -21,8 +21,8 @@ import java.util.Optional;
 public class UserController {
     private final UserRepository userRepository;
 
-    @GetMapping("/all")
-    public String index(Model model) {
+    @GetMapping("")
+    public String getAllStaff(Model model) {
         List<Person> persons = userRepository.findAll();
         model.addAttribute("people", persons);
         return "all";
@@ -40,7 +40,7 @@ public class UserController {
     @DeleteMapping("/{id}")
     public String delete(@PathVariable Long id) {
         userRepository.deleteById(id);
-        return "redirect:/api/all";
+        return "redirect:/api";
     }
     @GetMapping("/{id}/edit")
     public String edit(Model model, @PathVariable Long id){
@@ -54,7 +54,7 @@ public class UserController {
             return "edit";
         }
         userRepository.save(person);
-        return "redirect:/api/all";
+        return "redirect:/api";
     }
 
     @GetMapping("/new")

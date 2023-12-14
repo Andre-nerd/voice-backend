@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Show</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
 </head>
 <body>
 <p th:text="${person.getName()}">VALUE</p>
 <p th:text="${person.getId()}">VALUE</p>
 
-<a th:href="@{/api/{id}/edit(id=${person.getId()})}">Edit</a>
+<a class="btn" th:href="@{/api/{id}/edit(id=${person.getId()})}">Edit</a>
+<div>
+    <br>
+    <br>
+</div>
 
 <form th:method="DELETE" th:action="@{/api/{id}(id=${person.getId()})}">
     <input type="submit" value="Delete"/>
